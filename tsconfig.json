@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "target": "es6",
+    "jsx": "react",
+    "allowJs": true,
+    "checkJs": false,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["dom", "esnext"],
+    "typeRoots" : ["node_modules/@types", "src/assets/types"],
+    "moduleResolution": "Node",
+    "module": "esnext",
+    "esModuleInterop": true,
+    "baseUrl": "./src"
+  },
+  "include": ["**/*"]
+}
