@@ -1,12 +1,6 @@
-# Thales's Origin Frontend Take-Home Assignment
-[![Netlify Status](https://api.netlify.com/api/v1/badges/196a3275-2100-4f44-a923-184ab8a8f1e9/deploy-status)](https://app.netlify.com/sites/unruffled-johnson-4bbcb4/deploys)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ThalesGSN_frontend-take-home-assignment&metric=alert_status)](https://sonarcloud.io/dashboard?id=ThalesGSN_frontend-take-home-assignment)
-[![Jest Coverage Status](https://coveralls.io/repos/github/ThalesGSN/frontend-take-home-assignment/badge.svg?branch=master)](https://coveralls.io/github/ThalesGSN/frontend-take-home-assignment?branch=master)
-[![frontend-take-home-assignment](https://circleci.com/gh/ThalesGSN/frontend-take-home-assignment.svg?style=svg)](https://app.circleci.com/pipelines/github/ThalesGSN/frontend-take-home-assignment)
-[![frontend-take-home-assignment](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/59pzbg&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/59pzbg/runs)
+# Cypress assigment
 
-This is a frontend challenge proposed by Origin Financial.
-You can check the [results here.](https://useorigin.thalesnunes.com/)
+This is a frontend challenge proposed by Thales Nunes.
 
 # Usage
 
