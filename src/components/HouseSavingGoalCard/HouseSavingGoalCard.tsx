@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent, useEffect, useState } from 'react';
 import { Card, CardHeader, ConfirmButton } from './HouseSavingGoalCard.styles';
 import house from '../../assets/icons/house.svg';
 import TotalAmountInput from '../TotalAmountInput/TotalAmountInput';
@@ -11,6 +11,17 @@ const HouseSavingGoalCard: FunctionComponent = () => {
   const fourYearsFromNow = addYears(endOfDay(today), 4);
   const [totalAmount, setTotalAmount] = useState(25000);
   const [reachGoalBy, setReachGoalBy] = useState(fourYearsFromNow);
+  const [interestRate, setInterestRate] = useState(0);
+
+  useEffect(() => {
+    fetch('https://mocki.io/v1/9368eb03-143d-4cea-a06e-fd921431cf62').then(
+      response => {
+        response.json().then(({ interestRate }) => {
+          setInterestRate(interestRate);
+        });
+      }
+    );
+  }, []);
 
   const handleAmountChange = (newTotalAmount: number) => {
     setTotalAmount(newTotalAmount);
@@ -23,7 +34,9 @@ const HouseSavingGoalCard: FunctionComponent = () => {
   const numberOfMonthsToSave = isThisMonth(reachGoalBy)
     ? 1
     : differenceInMonths(reachGoalBy, today);
-  const result = totalAmount / numberOfMonthsToSave;
+  const result =
+    (totalAmount * Math.pow(1 + interestRate / 100, numberOfMonthsToSave)) /
+    numberOfMonthsToSave;
 
   return (
     <Card>
@@ -35,6 +48,7 @@ const HouseSavingGoalCard: FunctionComponent = () => {
       <TotalAmountInput
         initialValue={totalAmount}
         onChange={handleAmountChange}
+        interestRate={interestRate}
       />
       <ReachGoalByInput
         initialDate={reachGoalBy}

@@ -1,7 +1,7 @@
 {
-  "name": "frontend-challenge",
+  "name": "cypress",
   "version": "0.0.1",
-  "description": "Origin Frontend Challenge",
+  "description": "Cypress Challenge",
   "main": "src/index.ts",
   "dependencies": {
     "acorn": "^7.1.1",

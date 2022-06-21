@@ -8,10 +8,11 @@ import { GetNumberFromString } from '../../utils/functions';
 export interface TotalAmountInputProps {
   initialValue: number;
   onChange: (value: number) => void;
+  interestRate: number;
 }
 
 const TotalAmountInput = (props: TotalAmountInputProps) => {
-  const { initialValue, onChange } = props;
+  const { initialValue, onChange, interestRate } = props;
   const currencyMask = createNumberMask(CurrencyMaskOptions);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -20,7 +21,9 @@ const TotalAmountInput = (props: TotalAmountInputProps) => {
 
   return (
     <InputContainer>
-      <span>Total amount</span>
+      <span>
+        Total amount <small>Monthly rate: {interestRate}%</small>
+      </span>
       <span className="inputWrapper">
         <div className="iconArea" aria-label="Dollar sign">
           <span aria-hidden="true">$</span>

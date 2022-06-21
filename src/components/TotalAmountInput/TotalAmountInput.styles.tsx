@@ -11,6 +11,10 @@ export const InputContainer = styled.label`
 
   span {
     margin-bottom: 8px;
+    small {
+      font-size: 0.5rem;
+      opacity: 0.7;
+    }
   }
   .masked-input {
     -webkit-appearance: none;
