@@ -1,10 +1,12 @@
 import React, { FunctionComponent } from 'react';
 import { HeaderContainer } from './Header.styles';
-import Logo from '../../assets/icons/logo.svg';
+// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+// @ts-ignore
+import Logo from '../../assets/icons/logo.webp';
 
 const Header: FunctionComponent = () => (
   <HeaderContainer>
-    <img src={Logo} alt="Origin Financial Logo" />
+    <img src={Logo} alt="Bank Logo" />
   </HeaderContainer>
 );
 
