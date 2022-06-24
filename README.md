@@ -2,6 +2,20 @@
 
 This is a frontend challenge proposed by Thales Nunes.
 
+# What do you need to test to qualify as a valid request:
+* Different scenarios.
+
+* Different Interest Rates.
+
+* Edge cases.
+
+* At least 2 different resolutions.
+
+* Input mask.
+
+* Month selection by mouse and by typing.
+
+
 # Usage
 
 This project requires `Node >=12` and `NPM >= 6`.
@@ -32,17 +46,9 @@ For jest testing
 yarn test
 ```
 
-For cypress testing
-```
-#Add a .babelrc config file
-echo "{\"plugins\": [ \"istanbul\" ]}" > .babelrc
-
 # Start server and open cypress console
 yarn start && yarn cypress open
 
-# remove .babelrc config file
-rm .babelrc
-```
 
 ### Features
 
